@@ -10,8 +10,25 @@ fs.readFile('./hello.txt', (err, data) => {
 const file = fs.readFileSync('./hello.txt');
 console.log('Sync ',file.toString());
 
-fs.appendFile('./hello.txt',' This is so cool!', err = {
+// Append to a file
+// fs.appendFile('./hello.txt',' This is so cool!', err = {
+//   if (err) {
+//     console.log('Error');
+//   }
+// })
+
+// Write
+// fs.writeFile('bye.txt', 'Sad to see you go', err => {
+//   if(err) {
+//     console.log(err);
+//   }
+// })
+
+// DELETE
+fs.unlink('./bye.txt', err => {
   if (err) {
-    console.log('Error');
+    console.log("Error");
   }
+
+  console.log('Deleting');
 })
